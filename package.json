@@ -1,0 +1,50 @@
+{
+  "name": "webpack-add-noopener-plugin",
+  "version": "1.0.0",
+  "description": "A webpack plugin that automatically adds rel=\"noopener\" to all <a> tags with target=\"_blank\"",
+  "main": "src/index.js",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "noopener",
+    "security",
+    "target-blank",
+    "rel",
+    "html",
+    "webpack-plugin"
+  ],
+  "author": "CamThink",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/camthink/webpack-add-noopener-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/camthink/webpack-add-noopener-plugin/issues"
+  },
+  "homepage": "https://github.com/camthink/webpack-add-noopener-plugin#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0 || ^5.0.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "webpack": "^5.88.0"
+  }
+}
+

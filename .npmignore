@@ -1,0 +1,8 @@
+__tests__/
+coverage/
+.gitignore
+.npmignore
+jest.config.js
+*.test.js
+*.spec.js
+
