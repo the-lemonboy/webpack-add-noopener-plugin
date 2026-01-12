@@ -3,16 +3,16 @@
 [![npm version](https://img.shields.io/npm/v/webpack-add-noopener-plugin.svg)](https://www.npmjs.com/package/webpack-add-noopener-plugin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-简体中文 | [English](#english)
+[简体中文](#简体中文) | [English](#english)
 
 ---
 
-## 简介（中文）
+## 简体中文
 
 一个 Webpack 插件，自动为所有带有 `target="_blank"` 的 `<a>` 标签添加 `rel="noopener"` 属性，提高网站安全性。
 
-- 适用场景：需要在构建阶段统一为 HTML 中的外链添加 `rel="noopener"`，避免遗漏。
-- 支持：Webpack 4 / 5，完整 HTML 或仅 body 片段的 HTML。
+- **适用场景**：需要在构建阶段统一为 HTML 中的外链添加 `rel="noopener"`，避免遗漏。
+- **支持**：Webpack 4 / 5，完整 HTML 或仅 body 片段的 HTML。
 
 ### 为什么需要这个插件？
 
@@ -60,7 +60,7 @@ module.exports = {
 ```javascript
 new AddNoopenerPlugin({
   verbose: true,              // 是否在控制台输出处理信息，默认 false
-  extensions: ['.html']      // 要处理的文件扩展名数组，默认 ['.html']
+  extensions: ['.html']       // 要处理的文件扩展名数组，默认 ['.html']
 })
 ```
 
@@ -96,13 +96,15 @@ pnpm exec webpack --config example/webpack.config.js
 
 ### 处理前后对比
 
+**处理前：**
+
 ```html
 <a href="https://example.com" target="_blank">链接</a>
 <a href="https://example.com" target="_blank" rel="nofollow">链接</a>
 <a href="https://example.com" target="_blank" rel="noopener">链接</a>
 ```
 
-#### 处理后
+**处理后：**
 
 ```html
 <a href="https://example.com" target="_blank" rel="noopener">链接</a>
@@ -126,17 +128,17 @@ npm run test:coverage
 
 ### 发布到 npm 与 GitHub
 
-1. 更新版本号：`npm version <patch|minor|major>`（会自动打 tag）。  
-2. 更新 `CHANGELOG.md`：记录本次变更。  
-3. 验证质量：`npm test`（如有需要可补充 `npm run test:coverage`）。  
-4. 发布到 npm：`npm publish`（确保已登录并拥有发布权限）。  
-5. 推送到 GitHub：`git push origin main --tags`（或对应分支）。  
+1. 更新版本号：`npm version <patch|minor|major>`（会自动打 tag）。
+2. 更新 `CHANGELOG.md`：记录本次变更。
+3. 验证质量：`npm test`（如有需要可补充 `npm run test:coverage`）。
+4. 发布到 npm：`npm publish`（确保已登录并拥有发布权限）。
+5. 推送到 GitHub：`git push origin main --tags`（或对应分支）。
 
 发布前可执行以下自检：
 
-- README 示例能否跑通（`example/` 中构建一次）。  
-- `peerDependencies`/`engines` 是否符合预期。  
-- 打包体积是否仅包含 `files` 声明的内容（`npm pack --dry-run` 可查看）。  
+- README 示例能否跑通（`example/` 中构建一次）。
+- `peerDependencies`/`engines` 是否符合预期。
+- 打包体积是否仅包含 `files` 声明的内容（`npm pack --dry-run` 可查看）。
 
 ### 兼容性
 
@@ -166,8 +168,8 @@ MIT
 
 `webpack-add-noopener-plugin` is a Webpack plugin that automatically adds `rel="noopener"` to all `<a>` tags with `target="_blank"`, improving the security of your site.
 
-- Use case: enforce `rel="noopener"` for external links at build time, so you don't miss any.
-- Supported: Webpack 4 / 5, both full HTML documents and body-only HTML fragments.
+- **Use case**: Enforce `rel="noopener"` for external links at build time, so you don't miss any.
+- **Supported**: Webpack 4 / 5, both full HTML documents and body-only HTML fragments.
 
 ### Why this plugin?
 
@@ -251,13 +253,15 @@ After the build, open `example/dist/index.html` and you will see `rel="noopener"
 
 ### Before & after
 
+**Before:**
+
 ```html
 <a href="https://example.com" target="_blank">Link</a>
 <a href="https://example.com" target="_blank" rel="nofollow">Link</a>
 <a href="https://example.com" target="_blank" rel="noopener">Link</a>
 ```
 
-#### After
+**After:**
 
 ```html
 <a href="https://example.com" target="_blank" rel="noopener">Link</a>
@@ -279,17 +283,17 @@ npm run test:coverage
 
 ### Publish to npm & GitHub
 
-1. Bump version: `npm version <patch|minor|major>` (this also creates a git tag).  
-2. Update `CHANGELOG.md` to describe changes.  
-3. Ensure tests pass: `npm test` (and `npm run test:coverage` if needed).  
-4. Publish to npm: `npm publish` (make sure you are logged in and have permission).  
-5. Push to GitHub: `git push origin main --tags` (or your main branch).  
+1. Bump version: `npm version <patch|minor|major>` (this also creates a git tag).
+2. Update `CHANGELOG.md` to describe changes.
+3. Ensure tests pass: `npm test` (and `npm run test:coverage` if needed).
+4. Publish to npm: `npm publish` (make sure you are logged in and have permission).
+5. Push to GitHub: `git push origin main --tags` (or your main branch).
 
 Pre-publish checklist:
 
-- Try the example in `example/` to ensure the README instructions work.  
-- Check `peerDependencies` and `engines` in `package.json`.  
-- Confirm published files via `npm pack --dry-run` (should include only what you expect).  
+- Try the example in `example/` to ensure the README instructions work.
+- Check `peerDependencies` and `engines` in `package.json`.
+- Confirm published files via `npm pack --dry-run` (should include only what you expect).
 
 ### Compatibility
 
@@ -304,5 +308,11 @@ MIT
 
 Issues and PRs are welcome!
 
-#   w e b p a c k - a d d - n o o p e n e r - p l u g i n  
- 
+### Changelog
+
+#### 1.0.0
+
+- Initial release
+- Support automatic adding `rel="noopener"` to `<a target="_blank">` tags
+- Support custom file extensions
+- Support verbose mode
